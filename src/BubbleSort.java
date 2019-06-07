@@ -36,22 +36,15 @@ public class BubbleSort{
             is_sorted = true;
 
             for (int j = 1; j < (inputLength - i); j++) {
-
+                // kører når sorted == true
                 if (sorted) {
+                    //hvis venstre plads i arrayet er større end højre plads byttes værdierne
                     if (input[j - 1] > input[j]) {
                         temp = input[j - 1];
                         input[j - 1] = input[j];
                         input[j] = temp;
                         is_sorted = false;
                     }
-                } else {
-                    if (input[j - 1] < input[j]) {
-                        temp = input[j - 1];
-                        input[j - 1] = input[j];
-                        input[j] = temp;
-                        is_sorted = false;
-                    }
-
                 }
 
             }

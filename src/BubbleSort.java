@@ -15,18 +15,10 @@ public class BubbleSort{
 
         printArray(array);
 
-       // System.out.print("descending order: "); //99,88,77,66,55,1
-        //bubble_sort(array, false);
-       // printArray(array);
-
     }
+
 
     private static void bubble_sort(int[] input) {
-        bubble_sort(input, true);
-    }
-
-    private static void bubble_sort(int[] input, boolean sorted) {
-
         int inputLength = input.length;
         int temp;
         boolean is_sorted;
@@ -36,15 +28,12 @@ public class BubbleSort{
             is_sorted = true;
 
             for (int j = 1; j < (inputLength - i); j++) {
-                // kører når sorted == true
-                if (sorted) {
-                    //hvis venstre plads i arrayet er større end højre plads byttes værdierne
-                    if (input[j - 1] > input[j]) {
-                        temp = input[j - 1];
-                        input[j - 1] = input[j];
-                        input[j] = temp;
-                        is_sorted = false;
-                    }
+                //hvis venstre plads i arrayet er større end højre plads byttes værdierne
+                if (input[j - 1] > input[j]) {
+                    temp = input[j - 1];
+                    input[j - 1] = input[j];
+                    input[j] = temp;
+                    is_sorted = false;
                 }
 
             }
